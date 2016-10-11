@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Finallyy worksttt after delay';
+  getColor(color){
+    console.log(color);
+  }
 }

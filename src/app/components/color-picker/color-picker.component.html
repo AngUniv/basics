@@ -1,0 +1,11 @@
+<div class="panel panel-success">Color Picker-Event Binding
+  <div class="panel-body">
+   
+    <button class="btn btn-danger" (click)="colorChoose('red')">Red</button>
+    <button class="btn btn-success" (click)="colorChoose('green')">Green</button>
+  </div>
+</div>
+<div [ngStyle]="{'color': color}">
+  <h1 >Changing Colors</h1>
+</div>
+ 
