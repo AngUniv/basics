@@ -7,19 +7,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Angular Basics</a>
+          <a class="navbar-brand" [routerLink]="['/']">Angular Basics</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
+            <li routerLinkActive="active"><a routerLink="form">Forms</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['color']">Color Picker</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['employees']">Employees List</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 <div class="container">
-  <search-box text="From the app component"></search-box>  
-  <color-picker color="blue" (colorOutput)="getColor($event)"></color-picker>
+  <router-outlet></router-outlet>
 </div>    
-<reactive-form></reactive-form>

@@ -1,0 +1,7 @@
+<h3>Employee Directory</h3>
+<table class="table">
+    <tr *ngFor="let employee of employees">
+      <td>{{employee.name}}</td>
+      <td><button class="btn btn-primary" (click)="viewProfile(employee)">View</button></td>
+    </tr>
+</table>
